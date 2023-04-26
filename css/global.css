@@ -1,0 +1,30 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body {
+
+  padding-top: 80px;
+  /* décalage à cause de "fixed-top" de la navbar  */
+  padding-bottom: 50px;
+}
+.hero{
+  height: 400px;
+  background: url(../images/1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hidden-icon-footer {
+  margin:0 1rem;
+}
+footer{
+  position :fixed;
+  bottom: 0;
+  width: 100%;
+}
+.footer .lienFooter a{
+  color: gray;
+  text-decoration: none;
+  border-left: 3px orange solid;
+}
