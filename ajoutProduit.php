@@ -1,21 +1,21 @@
-<?php session_start();include("connexion.php"); // Session active && importation connexion pdo ?>
+<?php session_start();include("_connexion.php"); // Session active && importation connexion pdo ?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <?php include("metaLink.php"); // Importation de metaLink.php ?>
+        <?php include("_metaLink.php"); // Importation de metaLink.php ?>
         <title>Ajout de produit</title>
     </head>
     <body>
         <?php 
-            include("navbar.php"); // Importation de navbar.php
+            include("_navbar.php"); // Importation de navbar.php
             // Afficher un message flash 
             if(isset($_GET['message'])) { 
                     $message = $_GET['message'];
                     echo "<h3 class='message text-center text-success animleft'>" . $message . "</h3>";
                 }   
         ?>
-        <div class=" container d-flex flex-column align-items-center my-5">
-            <h3  class="anim">Ajout d'un produit</h3>
+        <div class=" container d-flex flex-column align-items-center mt-5">
+            <h3  class="anim">Ajouter un produit</h3>
             <!-- 
                 Envoie des infos avec l'action $_Post vers => createProduit.php pour le traitement
                 Si envoie de fichier, ne pas oublierl'attribut => enctype="multipart/form-data"
@@ -24,7 +24,7 @@
                 <div class="mb-3 animtop">
                     <label for="categorie" class="form-label fw-bold">Catégorie</label>
                     <select class="form-select"  name="categorie">
-                        <option selected>Choisissez la catégorie du produit</option>
+                        <option selected>Choisissez une catégorie du produit</option>
                         <option value="1">Ordinateur</option>
                         <option value="2">Tablette</option>
                         <option value="3">Mobile</option>
@@ -49,8 +49,7 @@
                 <button type="submit" class="btn btn-success mt-3 animtop">Ajouter</button>
             </form>
         </div>
-        
-        <?php include("script.php"); // Importation de script.php ?>
-        <?php include("footer.php"); ?>
+
+        <?php include("_script.php"); // Importation de script.php ?>
     </body>
 </html>

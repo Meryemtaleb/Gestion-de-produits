@@ -1,4 +1,4 @@
-<?php session_start(); include("connexion.php"); // session active && importation connexion pdo
+<?php session_start(); include("_connexion.php"); // session active && importation connexion pdo
 $id = $_GET['id']; // Récupération de l'id 
 $p = $pdo->prepare("DELETE FROM produit WHERE id=?"); // Prepare statement requete
 $params = array($id); // Associer les paramettres

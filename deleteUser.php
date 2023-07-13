@@ -1,4 +1,4 @@
-<?php session_start();include("connexion.php"); // session active && importation connexion pdo
+<?php session_start();include("_connexion.php"); // session active && importation connexion pdo
 $pseudo = $_GET['pseudo']; // récupération du pseudo 
 $p = $pdo->prepare("DELETE FROM user WHERE pseudo=?"); // Prepare statement requete
 $params = array($pseudo); // Associer les paramettres

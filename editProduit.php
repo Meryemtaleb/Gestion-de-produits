@@ -1,4 +1,4 @@
-<?php session_start();include("connexion.php"); // session active && importation connexion pdo
+<?php session_start();include("_connexion.php"); // session active && importation connexion pdo
     $id = $_GET['id']; // Récupération de l'id
     $ps = $pdo->prepare("SELECT * FROM produit WHERE id=?"); // Prepare statement
     $params = array($id); // Associer les paramettres 
@@ -8,11 +8,11 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <?php include("metaLink.php"); // Importation de metaLink.php ?>
+        <?php include("_metaLink.php"); // Importation de metaLink.php ?>
         <title>Modifier un produit</title>
     </head>
     <body>
-        <?php include("navbar.php"); // Importation de navbar.php ?>
+        <?php include("_navbar.php"); // Importation de navbar.php ?>
         <div class="container d-flex flex-column align-items-center mt-5">
             <h3 class="anim">Modifier un produit</h3>
             <!-- Envoie id via $_GET et les infos $_POST vers => updateProduit.php grace à ?id= -->
@@ -48,7 +48,7 @@
                 <button type="submit" class="btn btn-success mt-3 animtop">Enregistrer</button>
             </form>
         </div>
-        <?php include("footer.php"); ?>
-        <?php include("script.php"); // Importation de script.php ?>
+        
+        <?php include("_script.php"); // Importation de script.php ?>
     </body>
 </html>

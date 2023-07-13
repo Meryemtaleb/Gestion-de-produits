@@ -1,4 +1,4 @@
-<?php include("connexion.php"); // importation connexion pdo
+<?php include("_connexion.php"); // importation connexion pdo
 // Authentification :
 $login = $_POST['pseudo']; // Récupération du pseudo tapé via le formulaire 
 $pass = $_POST['mdp']; // Récupération du mdp tapé via le formulaire
